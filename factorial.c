@@ -27,6 +27,11 @@ void *f(void *arg) {
 }
 
 int main(int argc, char* argv[]) {
+    if(argc != 2) {
+        printf("This program calculates de factorial of an positive integer number.\n");
+        printf("USAGE: ./<executable_filename> <number>\n");
+        return 1;
+    }
     n = atoi(argv[1]);
     pthread_t t1, t2;
     Args arg1, arg2;
